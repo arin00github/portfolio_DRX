@@ -32,7 +32,7 @@
 
 #wrap{
     width: 100%;
-    min-width: 1024px;
+    // min-width: 1024px;
 
     .wrap-inner{
         position: relative;
@@ -58,9 +58,12 @@
             top: 50%;
             transform: translateY(-50%);
             left: 30px;
-            z-index: 100;
-            
+            z-index: 100; 
             position: fixed;
+
+            @media screen and (max-width:768px){
+                display: none;
+            }
 
             li{
                 position: relative;
@@ -127,6 +130,9 @@
                         width: 10%;
                         height:100%;
                         background-color: @brandColor;
+                        @media screen and (max-width:768px){
+                            transform: skewX(-30deg);
+                         }
                     }
 
                     .bg-shape{
@@ -136,10 +142,18 @@
                         width: 30%;
                         height: 100%;
                         background-color: @brandColor;
+
+                        @media screen and (max-width:768px){
+                            transform: skewX(-30deg);
+                         }
                     }
                     .main-slider-wrap.active{
                         transition: 0.3s 0.5s;
                         left: 55%;
+
+                        @media screen and (max-width:600px){
+                            left: 45%;
+                        }
                     }
 
                     .main-slider-wrap{
@@ -148,6 +162,20 @@
                             bottom: 0;
                             width: 420px;
                             height: 550px;
+
+                            @media screen and (max-width:1024px){
+                               width: 380px;
+                               height: 500px;
+                            }
+                            @media screen and (max-width:768px){
+                                width: 340px;
+                                height: 460px;
+                             }
+
+                            @media screen and (max-width:600px){
+                                width: 300px;
+                                height: 400px;
+                            }
 
                         #main-slider{
                             
@@ -190,6 +218,17 @@
                         top: 20%;
                         width: 35%;
                         height: 40%;
+                        @media screen and (max-width:1024px){
+                            width: 50%;
+                        }
+
+                        @media screen and (max-width:768px){
+                            left: 10%;
+                        }
+
+                        @media screen and (max-width:480px){
+                            left: 36px;
+                        }
 
                         .big-text{
                             margin-bottom: 16px;
@@ -199,6 +238,7 @@
                                 font-size:  100px;
                                 line-height: 0.9;
 
+
                                 span{
                                     display: block;
                                     font-size: 50px;
@@ -207,17 +247,37 @@
 
                                 img{
                                     width: 500px;
+
+                                    @media screen and (max-width:1024px){
+                                        width: 420px;
+                                    }
+
+                                    @media screen and (max-width:768px){
+                                        width: 340px;
+                                    }
                                 }
                             }
                             p:first-child{
                                 font-size: 50px;
                                 margin-bottom: 16px;
+
+                                @media screen and (max-width:768px){
+                                    font-size:  40px;
+                                }
+                                @media screen and (max-width:480px){
+                                    display: none;
+                                }
                             }
                         }
                         .small-text{
                             color: white;
                             font-size: 18px;
                             line-height: 1.8;
+
+                            @media screen and (max-width:1024px){
+                                font-size: 16px;
+                                line-height: 1.5;
+                            }
                         }
                         
 
@@ -247,6 +307,10 @@
                         width: 85%;
                         padding-top: 130px;
 
+                        @media screen and (max-width:480px){
+                            margin-left: 10%;
+                        }
+
                     
                         .time.active .time-inner{
                             transform: translateY(0);
@@ -272,7 +336,7 @@
                                 }
                                 .month-nav{
                                     margin-left: 28px;
-                                    display: flex;
+                                    display: none;
                                     li{
                                         color: white;
                                         font-family: @fontStyle01;
@@ -346,6 +410,10 @@
                                 transform: translateY(120%);
                                 transition: 0.5s 0.9s;
 
+                                @media screen and (max-width:480px) {
+                                    justify-content: center;
+                                }
+
                                 .slick-arrow{
 
                                     width: 28px;
@@ -354,6 +422,10 @@
                                         width: 100%;
                                         
                                         img{width: 100%;}
+                                    }
+
+                                    @media screen and (max-width:480px) {
+                                        display: none;
                                     }
                                 }
                                 
@@ -407,6 +479,10 @@
                         margin-left: 15%;
                         width: 85%;
 
+                        @media screen and (max-width:768px) {
+                            margin-left: 10%;
+                            width: 90%;
+                        }
                         
                         #playerContent{
                             padding-top: 120px;
@@ -414,6 +490,12 @@
                             .player-wrap{
                                 .player-list{
                                     margin-top: 18px;
+
+
+                                    @media screen and (max-width:600px) {
+                                        display: none;
+                                    }
+
                                     .player-menu{
                                         display: flex;
                                         li{
@@ -446,6 +528,16 @@
                                     position: absolute;
                                     width: 38%;
                                     transform: scale(0);
+
+
+                                    @media screen and (max-width:768px) {
+                                        left: 10%;
+                                    }
+
+                                    @media screen and (max-width:480px) {
+                                        left: 16px;
+                                    }
+
                                     h3{
                                         color: white;
                                         font-family: @fontStyle03;
@@ -453,11 +545,18 @@
                                         padding-bottom: 12px;
                                         text-transform: uppercase;
                                         font-weight: bold;
+
+                                        @media screen and (max-width:600px) {
+                                            font-size: 40px;
+                                        }
                                     }
                                     
                                     .careerbx{
                                         display: flex;
                                         padding-bottom: 24px;
+                                        @media screen and (max-width:768px) {
+                                            display: block;
+                                        }
                                         h4{
                                             color: white;
                                             font-family: @fontStyle03;
@@ -466,10 +565,16 @@
                                         ul{
                                             margin-left: 36px;
                                             transform: translateY(10px);
+
+                                            @media screen and (max-width:768px) {
+                                                margin-left: 0;
+                                            }
+
                                             li{
                                                 color: white;
                                                 opacity: 0.7;
                                             }
+
                                         }
                                         
                                     }
@@ -506,6 +611,14 @@
                                         width: 65%;
                                         height: 400px;
 
+                                        @media screen and (max-width:768px) {
+                                            height: 360px;
+                                        }
+
+                                        @media screen and (max-width:600px) {
+                                            width: 50%;
+                                        }
+
 
                                     .slick-arrow{
                                         position: absolute;
@@ -532,6 +645,18 @@
                                             //overflow: hidden;
                                             position: relative;
                                             margin-bottom: 40px;
+
+                                            @media screen and (max-width:768px) {
+                                                height: 360px;
+                                            }
+
+                                            @media screen and (max-width:600px) {
+                                                height: 310px;
+                                            }
+
+                                            @media screen and (max-width:600px) {
+                                                height: 320px;
+                                            }
                                             
 
                                             .pl-item-inner{
@@ -602,6 +727,12 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+
+                        @media screen and (max-width:768px) {
+                            margin: auto;
+                            width: 90%;
+                            
+                        }
                         
 
                         .slogan{
@@ -675,6 +806,20 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        
+                        @media screen and (max-width:768px){
+                            margin-left: 0;
+                            width: 100%;
+
+                        }
+
+                        @media screen and (max-width:480px) {
+                            
+                            width: 100%;
+                            height: 50%;
+                            display: block;
+                            
+                        }
 
                         .partner-desc-wrap.active{
                             transform: scaleY(1);
@@ -686,10 +831,16 @@
                             height: 100%;
                             transition: 0.4s 0.3s;
                             transform: scaleY(0);
+
                             transform-origin: top;
                             display: flex;
                             justify-content: center;
                             align-items: center;
+
+                            @media screen and (max-width:600px){
+                                flex-basis: 50%;
+    
+                            }
 
                             .part-desc-inner{
                                 display: flex;
@@ -714,11 +865,20 @@
                             flex-basis: 60%;
                             overflow: hidden;
 
+                            @media screen and (max-width:480px) {
+                                width: 100%;
+                                
+                            }
+
                             .partner-title{
                                 font-size: 60px;
                                 font-family: @fontStyle01;
                                 color: white;
                                 text-align: center;
+
+                                @media screen and (max-width:480px){
+                                    font-size: 24px;
+                                }
                             }
                             
                             .partner-box.active{
@@ -735,13 +895,23 @@
                                 justify-content: center;
                                 flex-wrap: wrap;
 
-                                .partner{
+                                .partner{ 
                                     width: 140px;
                                     margin: 8px;
+                                    box-sizing: border-box;
+
+                                    @media screen and (max-width:600px) {
+                                        margin: 0;;
+                                        width: 100px;
+                                        
+                                    }
     
                                     img{
                                         width: 100%;
                                     }
+                                }
+                                .partner.active{
+                                    border: 1px solid #fff;
                                 }
                             }
                         

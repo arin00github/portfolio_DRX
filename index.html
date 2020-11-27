@@ -90,57 +90,7 @@
 
                                     </div>
                                 </div>
-                                <!--news-->
-                                <!-- <div id="eventContent" class="tabBox">
-                                    
-                                    <div id="event-slider">
-                                        <div class="event-item">
-                                            <a href="#">
-                                                <p class="when">2020-09-22 11:08</p>
-                                                <p class="publisher">조선일보</p>
-                                                <h5 class="title"> DRX 김대호 감독, "설레고 떨리는 첫 무대, 잘해보고 싶은 마음 크다</h5>
-                                            </a>
-                                        </div>
-                                        <div class="event-item">
-                                            <a href="#">
-                                                <p class="when">2020-09-22 11:08</p>
-                                                <p class="publisher">조선일보</p>
-                                                <h5 class="title"> DRX 김대호 감독, "설레고 떨리는 첫 무대, 잘해보고 싶은 마음 크다</h5>
-                                            </a>
-                                        </div>
-                                        <div class="event-item">
-                                            <a href="#">
-                                                <p class="when">2020-09-22 11:08</p>
-                                                <p class="publisher">조선일보</p>
-                                                <h5 class="title"> DRX 김대호 감독, "설레고 떨리는 첫 무대, 잘해보고 싶은 마음 크다</h5>
-                                            </a>
-                                        </div>
-                                        <div class="event-item">
-                                            <a href="#">
-                                                <p class="when">2020-09-22 11:08</p>
-                                                <p class="publisher">조선일보</p>
-                                                <h5 class="title"> DRX 김대호 감독, "설레고 떨리는 첫 무대, 잘해보고 싶은 마음 크다</h5>
-                                            </a>
-                                        </div>
-                                        <div class="event-item">
-                                            <a href="#">
-                                                <p class="when">2020-09-22 11:08</p>
-                                                <p class="publisher">조선일보</p>
-                                                <h5 class="title"> DRX 김대호 감독, "설레고 떨리는 첫 무대, 잘해보고 싶은 마음 크다</h5>
-                                            </a>
-                                        </div>
-                                        <div class="event-item">
-                                            <a href="#">
-                                                <p class="when">2020-09-22 11:08</p>
-                                                <p class="publisher">조선일보</p>
-                                                <h5 class="title"> DRX 김대호 감독, "설레고 떨리는 첫 무대, 잘해보고 싶은 마음 크다</h5>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="slick-control2">
-
-                                    </div>
-                                </div> -->
+                                
                             </div>
                         </div>
                     </section>
@@ -278,7 +228,6 @@
                                     <ul class="partner-box">
                                         <li class="partner"><img src="img/partner/partner_logo_kakao.png" alt=""></li>
                                         <li class="partner"><img src="img/partner/partner_logo_hyperx.png" alt=""></li>
-                                        <li class="partner"><img src="img/partner/partner_logo_ETAC.png" alt=""></li>
                                         <li class="partner"><img src="img/partner/partner_logo_logitech.png" alt=""></li>
                                         <li class="partner"><img src="img/partner/partner_logo_Mclaren.png" alt=""></li>
                                         <li class="partner"><img src="img/partner/partner_logo_redbull.png" alt=""></li>
@@ -373,6 +322,7 @@
                   speed:500,
                   prevArrow: '<button type="button" class="slick-prev"><a herf="#"><img src="img/icon/free-icon-back.png"></a><button>',
                   nextArrow: '<button type="button" class="slick-next"><a herf="#"><img src="img/icon/free-icon-next.png"></a><button>',
+                    
               })
 
               $('#player-slider').slick({
@@ -389,6 +339,21 @@
                     appendArrows:$('.playerbox'),
                     prevArrow: '<button type="button" class="slick-prev"><a herf="#"><img src="img/icon/free-icon-back.png"></a><button>',
                   nextArrow: '<button type="button" class="slick-next"><a herf="#"><img src="img/icon/free-icon-next.png"></a><button>',
+                    responsive:[
+                        {
+                            breakpoint:1080,
+                            settings:{
+                                slidesToShow : 2,
+                            }
+                        },
+                        {
+                            breakpoint:600,
+                            settings:{
+                                slidesToShow : 1,
+                            }
+                        }
+                    
+                    ]
               })
               
               let playerData =[
@@ -462,6 +427,46 @@
 
                     console.log(`beforeChange : ${current}`)
                     console.log(`beforeChange : ${next}`)
+                })
+
+                const partnerData = [
+                    {name : 'Kakao Friends',
+                    desc : "카카오톡과 카카오스토리를 비롯한 카카오의 서비스에서 사용할 수 있는 이모티콘 캐릭터이자 사실상 카카오의 마스코트. 세부적으로는 무지 앤 프렌즈와 프로도 앤 프렌즈로 구성되어 있으며, 2016년에 새로운 캐릭터인 라이언이 추가되었다. 카카오의 부업 같지만 이제는 명실상부한 밥줄 중 하나. 인형 등 판매수익, 로열티 매출액만 100억을 넘는다. 아예 캐릭터 법인을 분사시켜서 관련 사업만으로도 카카오그룹 매출 중에서 8%를 차지한다. 캐릭터 관련 사업은 계열사 카카오커머스에서 전개한다.",
+                    url : "img/partner/partner_logo_kakao.png"
+                    },
+                    {name: 'Hyper X',
+                    desc : "로지텍이나 RAZER, 스틸시리즈, CORSAIR만큼 유명하지는 않지만, 준수한 품질의 게이밍 기어들을 만들어 내며 나름대로 시장에서 한 자리를 차지하고 있는 기업이다. 특히 헤드셋의 경우 앞서 언급된 회사들보다도 인기가 많으며 무선 제품인 Cloud Flight 시리즈가 유명하다. 키보드 역시 타사의 제품들이 변태 하단배열, 호불호 갈리는 키감 등으로 지적받는 반면 HyperX의 키보드들은 큰 문제점 없이 무난하다는 평이다.",
+                    url : "img/partner/partner_logo_hyperx.png"
+                    },
+                    {name : 'Logitech',
+                    desc:"주력 제품은 마우스로, 한국은 물론 해외에서도 마우스 하면 가장 먼저 로지텍을 떠올릴 만큼 유명한 마우스 분야 세계 1위의 기업이다. 또한 사무용 키보드 역시 마우스 못지 않은 주력 제품으로, 미국 시장에서 점유율 1위를 유지 중이다. 게다가 화상회의, 스트리밍 방송용 웹캠 분야에서도 절대강자의 위치에 있는데, 2017년 기준 웹캠 시장 점유율 73%로 세계 1위를 차지하고 있다.",
+                    url : "img/partner/partner_logo_logitech.png"
+
+                    },
+                    {name : 'McLaren',
+                    desc: "1985년에 설립된 영국의 슈퍼카 제조사.애스턴 마틴의 대한민국 딜러이자 할리 데이비슨을 들여오는 기흥인터내셔널을 통해 대한민국에 들어왔으며, 서울특별시 서초구 반포4동 서울성모병원 인근에 커다란 매장을 오픈했다. ",
+                    url : "img/partner/partner_logo_Mclaren.png"},
+                    {name : 'Redbull',
+                    desc : "오스트리아에서 개발되어 167여 국가에서 팔리고 있는 에너지 드링크.",
+                    url : "img/partner/partner_logo_redbull.png"},
+                    {name : 'Xenics',
+                    desc: "컴퓨터 주변기기 제조업체이며 국내 메이저 기계식 키보드 제작사 5대장 중 하나",
+                    url : "img/partner/partner_logo_xenics.png"}
+                ]
+
+                $('.partner').mouseover(function(){
+                    $(this).addClass('active').siblings().removeClass('active')
+                }).mouseout(function(){
+                    $(this).removeClass('active')
+                })
+
+                $('.partner').each(function(index,item){
+                    let idx = index;
+                    $(item).click(function(){
+                        $('.part-text').text(partnerData[idx].desc)
+                        $('.part-logo img').attr('src', partnerData[idx].url)
+                    })
+                    
                 })
 
               
