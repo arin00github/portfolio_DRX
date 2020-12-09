@@ -8,7 +8,7 @@
 @fontStyle02 : HYGothic A1;
 @fontStyle03 : Quantico;
 @paddingSize : 0 200px;
-@padVertical : 80px 0;
+@padVertical : 80px 0; 
 
 .basicStyle {
     text-align: center;
@@ -102,6 +102,42 @@
                 transform: skewX(-40deg);
             }
         }
+
+        #menubtn{
+            position: fixed;
+            right: 24px;
+            top: 24px;
+            width: 30px;
+            height: 30px;
+            display: none;
+            z-index: 200;
+
+            @media screen and (max-width:768px) {
+                display: block;
+            }
+            
+            span{
+                left: 0;
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                border-radius: 2px;
+                background: #fff;
+            }
+            span:nth-child(1){
+                top: 0;
+            }
+
+            span:nth-child(2){
+                top: 50%; transform: translateY(-50%);
+            }
+
+            span:nth-child(3){
+                bottom: 0;
+            }
+        }
+
+        
 
 
         #container{

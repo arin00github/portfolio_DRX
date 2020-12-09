@@ -2,21 +2,6 @@ const navlink = document.querySelectorAll('.nav02 > li > a');
 const tabBox = document.querySelectorAll('.tabBox');
 
 
-const playerbtn = document.querySelectorAll('.player-menu > li');
-
-for(let i =0 ; i <playerbtn.length ; i++){
-    playerbtn[i].addEventListener('mouseover',function(){
-        playerbtn[i].style.opacity = 1;
-    })
-    playerbtn[i].addEventListener('mouseout',function(){    
-        if(playerbtn[i].classList.contains('slick-active')){
-            playerbtn[i].style.opacity = 1;
-        }else{
-            playerbtn[i].style.opacity = 0.4;
-        }
-    })
-}
-
 
 
 //////section02 new-slider//////
